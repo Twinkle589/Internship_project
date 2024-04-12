@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Birthstone+Bounce:wght@400;500&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Josefin+Sans:ital@1&family=Loved+by+the+King&family=MonteCarlo&family=Mulish:ital,wght@0,200..1000;1,200..1000&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <title>Dribbble Logo</title>
+
+    <style>
+
+@media only screen and (min-width: 768px) {
+            .container {
+                max-width: 768px;
+            }
+        }
+        .logo-image{
+            margin-left: 60px;
+        }
+
+        h2{
+            font-family: Rubik, sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    margin-top: 80px;
+        }
+
+        .container mt-5 {
+            display: flex;
+            
+            justify-content: space-between;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            display: flex;
+            justify-content: center; /* Center align horizontally */
+            align-items: center; /* Center align vertically */
+            height: 100vh;
+            margin: 0; /* Remove default margin */
+            padding: 0; /* Remove default padding */
+        }
+
+        .content {
+            width: 80%; /* Adjust the width as needed */
+            max-width: 800px; /* Set a maximum width */
+            text-align: center; /* center align text within container */
+        }
+        
+        header {
+            width: 100%;
+            padding: 20px; /* Example padding for the header */
+            position: fixed; /* Fixed position to stay at the top */
+            top: 0;
+            margin-left: -900px;
+        }
+
+
+        .image {
+            width: 324px;
+            height: 223px;
+            margin-right: 10px;
+            float: left;
+        }
+
+        .card{
+            border-radius:1.25rem;
+        }
+        .card-text{
+            line-height: 1.3;
+            font-size: 14px;
+            color: #6c6a73;
+            margin-top: -25px;
+        }
+
+        /* Style for the image */
+        .card img {
+            max-width: 100%;
+            transition: transform 0.3s ease;
+        }
+
+        /* Hover effect for the card */
+        .card:hover img {
+            transform: translateY(-70px);
+        }
+
+        .card-body {
+           display: none;  /*Hide card body by default */
+           border-radius: 70px;
+        }
+        .card-body.show {
+            display: block; /* Show card body when .show class is applied */
+        }
+        
+        
+
+        .card-title{
+            font-size: 16px;
+            font-weight: 900;
+        }
+        .text {
+            font-size: 16px;
+            margin-bottom: 5px;
+        }
+        .pink-outline {
+            outline: 2px solid #ea4d89; /* Pink outline color */
+        }
+
+        .radio-button {
+            float: left;
+            margin-bottom: 15px;
+           
+        }
+
+    </style>
+</head>
+<body>
+    <header class="logo-image">
+        <img src="images/pngwingcom.png" alt="Example PNG Image" width="100" height="100" style="margin-left: 10px;">
+        <a href="file:///D:/Dribbble%20internship%20project/html/picupload.html"><button class="btn btn-primary" style=" margin-left: 27px; background-color: #f3f3f3; color: #6c6a73; border-color: #f3f3f3; font-family: Rubik, sans-serif;
+        font-optical-sizing: auto;
+        font-weight: weight;
+        font-style: normal;"><b>&lt;</b></button></a>
+        
+    </header>
+
+    <div class="content" >
+    <h2>What brings you to dribbble</h2>
+   
+    <p>Select the options that best describe you. Don't worry, you can explore other options later.</p>
+
+    <div class="row row-cols-1 row-cols-md-3 g-4" style="margin-top: 100px; ">
+        <div class="col">
+          <div class="card" onclick="toggleSelection(this)">
+            <img src="images/work1.png" class="card-img-top" alt="...">
+            <h5 class="card-title">I'm a designer looking to
+                share my work</h5>
+            <div class="card-body">
+              
+                <div class="card-info">
+              <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                </div>
+                
+            </div>
+            <input type="radio" name="options" class="radio-button" onchange="enableSubmit()">
+          </div>
+        </div>
+        <div class="col">
+          <div class="card" onclick="toggleSelection(this)">
+            <img src="images/work2.png" class="card-img-top" alt="...">
+            <h5 class="card-title">I'm looking to hire a
+                designer</h5>
+            <div class="card-body">
+              
+              <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              
+            </div>
+            <input type="radio" name="options" class="radio-button" onchange="enableSubmit()">
+          </div>
+        </div>
+        <div class="col">
+          <div class="card" onclick="toggleSelection(this)">
+            <img src="images/work3.png" class="card-img-top" alt="...">
+            <h5 class="card-title">I'm looking for design
+                inspiration</h5>
+            <div class="card-body">
+             
+              <p class="card-text">With over 7 million shots from a vast
+                community of designers, Dribbble is
+                the leading source for design
+                inspiration.</p>
+              
+            </div>
+            <input type="radio" name="options" class="radio-button" onchange="enableSubmit()">
+          </div>
+        </div>
+<div style="margin-left: 278px; margin-top: 40px; font-size: 15px;">
+    <div>
+    <p><b>Anything else? You can select multiple</b></p>
+    </div>
+
+    <div>
+    <button id="submitButton" type="submit" class="btn btn-primary" style="background-color: #ea4b8b; border-color: #ea4b8b; width: 180px;
+    border-radius: 8px;" disabled onclick="submitForm()">Finish</button>
+    </div>
+
+    <div>
+    <p><a href="file:///D:/Dribbble%20internship%20project/html/picupload.html" style="color: #a3a1a2; font-weight: 500;">or press <b>Return</b></a></p>
+    </div>
+    </div>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<script>
+
+
+    function toggleSelection(div) {
+        var radio = div.querySelector('.radio-button');
+        radio.checked = !radio.checked;
+    }
+</script>
+
+<script>
+    // Add event listener to each card
+    document.querySelectorAll('.card').forEach(card => {
+        card.addEventListener('click', function() {
+            // Hide all card bodies
+            document.querySelectorAll('.card-body').forEach(body => {
+                body.classList.remove('show');
+            });
+            // Show the card body associated with the clicked card
+            this.querySelector('.card-body').classList.add('show');
+        });
+    });
+</script>
+
+<script>
+    // Add event listener to each card
+    document.querySelectorAll('.card').forEach(card => {
+        card.addEventListener('click', function() {
+            // Remove pink outline from all cards
+            document.querySelectorAll('.card').forEach(card => {
+                card.classList.remove('pink-outline');
+            });
+            // Add pink outline to the clicked card
+            this.classList.add('pink-outline');
+            // Hide all card bodies
+            document.querySelectorAll('.card-body').forEach(body => {
+                body.classList.remove('show');
+            });
+            // Show the card body associated with the clicked card
+            this.querySelector('.card-body').classList.add('show');
+        });
+    });
+</script>
+
+<script>
+    function moveImage(imageId) {
+        const image = document.getElementById(imageId); // Select the associated image
+        if (image) {
+            // Move the image 50px upward
+            image.style.transform = 'translateY(-50px)';
+        }
+    }
+</script>
+
+<script>
+    function enableSubmit() {
+        const submitButton = document.getElementById('submitButton');
+        const radioButtons = document.querySelectorAll('.radio-button');
+        let selected = false;
+        
+        radioButtons.forEach(radioButton => {
+            if (radioButton.checked) {
+                selected = true;
+            }
+        });
+        
+        if (selected) {
+            submitButton.disabled = false;
+        } else {
+            submitButton.disabled = true;
+        }
+    }
+
+    function submitForm() {
+            // Redirect to the next page
+            window.location.href = "file:///D:/Dribbble%20internship%20project/html/verifypage.html#";
+        }
+</script>
+<script>
+    function toggleSelection(div) {
+        var radio = div.querySelector('.radio-button');
+        radio.checked = !radio.checked;
+        radio.dispatchEvent(new Event('change'));
+    }
+</script>
+
+</body>
+</html>

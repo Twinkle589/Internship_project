@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Page with Navbar</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome CSS (for icons) -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Birthstone+Bounce:wght@400;500&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Josefin+Sans:ital@1&family=Loved+by+the+King&family=MonteCarlo&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <style>
+         @media only screen and (min-width: 768px) {
+            .container {
+                max-width: 768px;
+            }
+        }
+        .navbar {
+            background-color: #ffffff;
+            color: #000;
+        }
+
+        .navbar-nav .nav-link {
+            margin-left: 30%;
+        }
+        
+        .container{
+            max-width: 1520px;
+            
+        }
+        .container-verify{
+            max-width: max-content;
+            align-content: center;
+            display: contents;
+            font-family: "DM Sans", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: weight;
+            font-style: normal;
+            font-size: 19px;
+            color: #69686b;
+            font-weight: 550;
+
+        }
+
+        .container-verify h1{
+            color: #000;
+            font-weight: bold;
+            font-size: 48px;
+            margin: revert;
+        }
+
+        .navbar-brand img{
+            width: 110px;
+            height: 78px;
+        }
+
+
+        body {
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            margin: auto;
+            align-items: center;
+            
+        }
+
+        .footer {
+            background-color: #fff;
+            color: #69686b;
+            padding: 20px 0;
+            width: 100%;
+            bottom: 0;
+            font-family: "DM Sans", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: weight;
+            font-style: normal;   
+            line-height: 2;
+
+        }
+
+        .footer-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            font-family: "DM Sans", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: weight;
+            font-style: normal;
+            color: #69686b;
+        
+        }
+
+        .footer-column {
+            flex: 0 0 calc(16.666% - 20px);
+            max-width: calc(16.666% - 20px);
+            text-align: left;
+        }
+
+        .footer-link {
+            color: #69686b;
+            text-decoration: none;
+        }
+
+        .footer-link:hover {
+            color: #333; /* Change color on hover */
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-md navbar-light bg-light">
+        <div class="container">
+            <!-- Dribbble Logo -->
+            <a class="navbar-brand" href="#">
+                <img src="images/logo2.png" alt="Dribbble Logo" width="30" height="30" class="d-inline-block align-top" loading="lazy">
+            </a>
+            
+            <!-- Navbar Toggler -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <!-- Navbar Links -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><b>Inspiration</b></a>
+                    </li>
+                    <li class="nav-item" >
+                        <a class="nav-link" href="#" style="width: 95px;"><b>Find work</b></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"style="width: 120px;"><b>Learn Design</b></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"style="width: 95px;"><b>Go Pro</b></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"style="width: 140px;"><b>Hire Designers</b></a>
+                    </li>
+                </ul>
+                
+                <!-- Search Bar -->
+                <form class="form-inline my-2 my-lg-0" >
+                    <input class="form-control mr-sm-2" style="margin-left: 493px;width: 130px;" type="search" placeholder="Search" aria-label="Search">
+                </form>
+                
+                <!-- Profile Picture and Upload Button -->
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <img src="images/profile_pic.jpg" alt="Profile Picture" class="rounded-circle mx-2" style="width: 30px; height: 30px;">
+                    </li>
+                    <li class="nav-item">
+                        <button class="btn btn-outline-primary mx-2" style=" color:#ffffff; background-color:  #ea4b8b; border-color: #ea4b8b;">Upload</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container-verify">
+        <h1>Please verify your email...</h1>
+
+        <img src="msgpic.jpg" alt="msg-icon" class="msg=icon" style="width: 150px;">
+
+        <p>Please verify your email address. We've sent a confirmation email to:</p><br>
+
+        <p><b>account@refero.design</b></p><br>
+
+     <p>Click the confirmation link in that email to begin using Dribbble.</p><br>
+
+        <p>Didn't receive the email? Check your Spam folder, it may have been caught by a filter. <br>If
+             you still don't see it, you can <a href="#" onclick="history.back(); return false;" style="color: #ea4b8a;">resend the confirmation email.</a></p>
+
+        <p>Wrong email address? <a href="#" onclick="history.back(); return false;" style="color: #ea4b8a;">Change</a></p>
+    </div>
+    
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <img src="pngwingcom.png" alt="Example PNG Image" width="100" height="100">
+                    <p>Dribbble is the world's leading
+                        community for creatives to share, grow,
+                        and get hired.</p>
+                    
+                        <i class="fab fa-dribbble"></i>
+                        <i class="fab fa-twitter"></i>
+                        <i class="fab fa-instagram"></i>
+                        <i class="fab fa-facebook"></i>
+                        <i class="fab fa-pinterest"></i>
+
+                </div>
+                <div class="footer-column">
+                    <b><a href="#" class="footer-link" style="color: #000;">For Designers</a></b>
+
+                    <div>
+                        <a href="#" class="footer-link">Go Pro!</a>
+                    </div>
+
+                    <div>
+                        <a href="#" class="footer-link">Explore design work</a>
+                    </div>
+
+                    <div>
+                        <a href="#" class="footer-link">Design blog</a>
+                    </div>
+
+                    <div>
+                        <a href="#" class="footer-link">Overtime podcast</a>
+                    </div>
+
+                    <div>
+                        <a href="#" class="footer-link">Playoffs</a>
+                    </div>
+
+                    <div>
+                        <a href="#" class="footer-link">Weekly Warm-up</a>
+                    </div>
+
+                    <div>
+                        <a href="#" class="footer-link">Refer a Friend</a>
+                    </div>
+
+                    <div>
+                        <a href="#" class="footer-link">Code of conduct</a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <b><a href="#" class="footer-link"style="color: #000 ";>Hire designers</a></b>
+
+                    <div>
+                        <a href="#" class="footer-link">Post a job opening</a>
+                    </div>
+
+                    <div>
+                        <a href="#" class="footer-link">Post a freelance project</a>
+                    </div>
+
+                    <div>
+                        <a href="#" class="footer-link">Search for designers</a>
+                    </div>
+
+                    <div>
+                        <b><a href="#" class="footer-link"style="color: #000 ">Brands</a></b>
+                    </div>
+                    
+                    <div>
+                        <a href="#" class="footer-link">Advertise with us</a>
+                    </div>
+
+                </div>
+                <div class="footer-column">
+                    <b><a href="#" class="footer-link"style="color: #000 ">Company</a></b>
+
+                    
+                    <div>
+                        <a href="#" class="footer-link">About</a>
+                    </div>
+
+                    <div>
+                        <a href="#" class="footer-link">Careers</a>
+                    </div>
+                    
+                    <div>
+                        <a href="#" class="footer-link">Support</a>
+                    </div>
+
+                    <div>
+                        <a href="#" class="footer-link">Media kit</a>
+                    </div>
+                    
+                    <div>
+                        <a href="#" class="footer-link">Testimonials</a>
+                    </div>
+
+                    <div>
+                        <a href="#" class="footer-link">API</a>
+                    </div>
+
+                    <div>
+                        <a href="#" class="footer-link">Terms and services</a>
+                    </div>
+
+                    <div>
+                        <a href="#" class="footer-link">Privacy policy</a>
+                    </div>
+                    <div>
+                        <a href="#" class="footer-link">Cookie policy</a>
+                    </div>
+                    
+                </div>
+                <div class="footer-column">
+                    <b><a href="#" class="footer-link"style="color: #000 ">Directories</a></b>
+                    
+                    <div>
+                        <a href="#" class="footer-link">Design jobs</a>
+                    </div>
+
+                    <div>
+                        <a href="#" class="footer-link">Designers for hire</a>
+                    </div>
+                    
+                    <div>
+                        <a href="#" class="footer-link">Freelance designers<br> for hire</a>
+                    </div>
+
+                    <div>
+                        <a href="#" class="footer-link">Tags</a>
+                    </div>
+                    
+                    <div>
+                        <a href="#" class="footer-link">Place</a>
+                    </div>
+
+                    <div>
+                        <b><a href="#" class="footer-link"style="color: #000 ">Design Assets</a></b>
+                    </div>
+                    
+                    <div>
+                        <a href="#" class="footer-link">Dribbble Marketplace</a>
+                    </div>
+
+                    <div>
+                        <a href="#" class="footer-link">Creative marketplace</a>
+                    </div>
+                    
+                    <div>
+                        <a href="#" class="footer-link">Fontspring</a>
+                    </div>
+
+                    <div>
+                        <a href="#" class="footer-link">Font squirrel</a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <b><a href="#" class="footer-link"style="color: #000 ">Design Resources</a></b>
+                    
+                    <div>
+                        <a href="#" class="footer-link">Freelancing</a>
+                    </div>
+
+                    <div>
+                        <a href="#" class="footer-link">Design hiring</a>
+                    </div>
+                    
+                    <div>
+                        <a href="#" class="footer-link">Design portfolio</a>
+                    </div>
+
+                    <div>
+                        <a href="#" class="footer-link">Design Education</a>
+                    </div>
+                    
+                    <div>
+                        <a href="#" class="footer-link">Creative process</a>
+                    </div>
+
+                    <div>
+                        <a href="#" class="footer-link">Design Indusrty Trends</a>
+                    </div>    
+                    
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- Bootstrap JS (optional) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- Script to handle file selection -->
+    <script>
+        // Function to handle file selection
+        document.getElementById('profileImageInput').onchange = function(event) {
+            const file = event.target.files[0];
+            if (file) {
+                // Create a FileReader to read the selected file
+                const reader = new FileReader();
+                reader.onload = function(event) {
+                    // Get the container and image elements
+                    const image = document.getElementById('profileImage');
+                    
+                    // Update the image source and display it
+                    image.src = event.target.result;
+                };
+                // Read the selected file as a data URL
+                reader.readAsDataURL(file);
+            }
+        };
+    </script>
+
+
+<script>
+    document.getElementById('profileImageInput').onchange = function(event) {
+        const file = event.target.files[0];
+        if (file) {
+            const reader = new FileReader();
+            reader.onload = function(event) {
+                const imageDataUrl = event.target.result;
+                // Redirect to the next page with the selected image as a URL parameter
+                window.location.href = "file:///D:/Dribbble%20internship%20project/html/picupload.html?image=" + encodeURIComponent(imageDataUrl);
+            };
+            reader.readAsDataURL(file);
+        }
+    };
+</script>
+
+<script>
+    // Function to retrieve and display the profile picture from the URL parameter
+    window.onload = function() {
+        const params = new URLSearchParams(window.location.search);
+        const image = params.get('image');
+        if (image) {
+            // Set the source of the image element to the URL parameter value
+            document.getElementById('profileImage').src = decodeURIComponent(image);
+        }
+    };
+</script>
+</body>
+</html>

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+
+@media only screen and (min-width: 768px) {
+            .container {
+                max-width: 768px;
+            }
+        }
+
+        .navbar-text-right {
+            margin-right: auto; 
+        }
+
+        /* Style for the yellow color div */
+        .yellow-div {
+            background-color: #f3d085;
+            width: 35%;
+            height: 100vh;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: -1; /* Ensure the div is behind other content */
+            display: flex;
+            flex-direction: column;
+
+        }
+            .yellow-text1 {
+            color: #876317;
+            font-weight: bold;
+            margin-top: 40px;
+            margin-left: 45px;
+            font-size: 30px;
+            line-height: 1.2;
+        }
+
+        .yellow-image1 {
+            width: 105px;
+            margin-left: 40px;
+            padding-top: 55px;
+        }
+
+        .yellow-image {
+            margin-top: 60px;
+
+        }
+
+        /* Style for the login form container */
+        .login-container {
+            margin-top: 20px; /* Adjust the margin from the top */
+        }
+
+        .white-content {
+            margin-left: 40%; /* Make space for the yellow div */
+            height: 100vh;
+            margin-top:80px;
+            padding: 20px; /* Add padding for better appearance */
+        }
+
+        /* Style for the form */
+        form {
+            max-width: 400px; /* Limit the form width */
+            margin: 0 auto; /* Center the form horizontally */
+        }
+
+        .form-check-label{
+            font-size: 14px;
+    line-height: 1;
+    color: #6e6e71;
+    font-weight: 500;
+    
+        }
+
+        .form-check-label2{
+            line-height: 0.5;
+    margin-top: 30px;
+    font-size: 12px;
+    font-weight: 500;
+    color: #6e6e71;
+        }
+        
+    </style>
+</head>
+<body>
+
+    <nav style="position: absolute;
+    top: 10px; /* Adjust as needed */
+    right: 20px;">
+        <div class="container-fluid justify-content-end">
+            <span class="navbar-text">Already a member?</span>
+            <a class="navbar-brand mr-auto" href="#" style="color:#5a49b8; font-size: 15px;"><b>Sign In</b></a>
+            
+        </div>
+    </nav>
+
+<!-- Yellow color div -->
+<div class="yellow-div">
+    <img src="images/logo1.jpg" class="yellow-image1">
+    <div class="yellow-text1" >Discover the world's top Designers and Creatives.</div>    
+    <img src="images/loginpic1.JPG" class="yellow-image">
+</div>
+
+<!-- Bootstrap Login Form -->
+<div class="white-content">
+    <h2 style="margin-left: 234px; font-size:27px; padding-bottom: 50px;"><b>Sign up to Dribbble</b></h2>
+    <form id="signupForm">
+        <div class="form-row">
+            <div class="col">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" class="form-control" id="name" style="background: #f3f3f3; border: 1px solid #f3f3f3;">
+                </div>
+            </div>
+            <div class="col">
+                <div class="form-group">
+                    <label for="username">Username</label>
+                    <input type="text" class="form-control" id="username" style="background: #f3f3f3; border: 1px solid #f3f3f3;">
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" class="form-control" id="email" style="background: #f3f3f3; border: 1px solid #f3f3f3;">
+        </div>
+        <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" class="form-control" id="password" placeholder="6+ Characters" style="background: #f3f3f3; border: 1px solid #f3f3f3;">
+        </div>
+
+        <div class="form-group form-check" style="margin-top: 45px; margin-bottom: 35px;">
+            <input type="checkbox" class="form-check-input" id="captcha">
+            <label class="form-check-label" for="captcha">Creating an account means you're okay with our <a class="navbar-brand mr-auto" href="#" style="color:#5a49b8; font-size: 14px;">Terms of
+                Service, Privacy Policy</a>, and our default <a class="navbar-brand mr-auto" href="#" style="color:#5a49b8; font-size: 14px;">Notification
+                Settings.</a></label>
+        </div>
+
+        <button type="button" class="btn btn-primary" style="background-color: #ea4b8b; border-color: #ea4b8b;" onclick="validateForm()">Create Account</button>
+        <div class="form-check-label2">
+        <label>This site is protected by reCAPTCHA and the Google
+            <a class="navbar-brand mr-auto" href="#" style="color:#5a49b8; font-size: 12px;">Privacy Policy</a> and Terms of <a class="navbar-brand mr-auto" href="#" style="color:#5a49b8; font-size: 12px;">Service apply</a></label>
+        </div>
+    </form>
+</div>
+
+
+<!-- Bootstrap JS (optional) -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script>
+    function validateForm() {
+        var name = document.getElementById('name').value;
+        var username = document.getElementById('username').value;
+        var email = document.getElementById('email').value;
+        var password = document.getElementById('password').value;
+        var checkbox = document.getElementById('captcha').checked;
+
+        if (name !== '' && username !== '' && email !== '' && password.length >= 6 && checkbox) {
+            window.location.href = "file:///D:/Dribbble%20internship%20project/html/picupload.html"; // Replace 'next_page.html' with the URL of the next page
+        } else {
+            alert('Please fill all the fields and accept the terms to create an account.');
+        }
+    }
+</script>
+</body>
+</html>
